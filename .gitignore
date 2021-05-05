@@ -1,6 +1,6 @@
-.dataset
-.images
+dataset
+images
+docs
 
-.create-my-ressults.py
 
-.finalCNN_1.h5
+.CNN_model.h5
