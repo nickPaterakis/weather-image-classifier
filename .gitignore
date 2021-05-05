@@ -1,6 +1,7 @@
 dataset
 images
 docs
-
+__pycache__
 
 CNN_model.h5
+
