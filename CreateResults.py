@@ -50,7 +50,7 @@ def plot_confusion_matrix(cm, classes,
 classes = ["Cloudy", "Rain", "Shine", "Sunrise"]
 
 # Load the model
-loaded_model = keras.models.load_model('CNN_model.h5')
+loaded_model = keras.models.load_model('models/CNN_model.h5')
 
 # Parse numbers as floats
 X_train = X_train.astype('float32')

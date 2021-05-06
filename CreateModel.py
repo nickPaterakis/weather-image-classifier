@@ -1,10 +1,11 @@
-from tensorflow.keras.models import Sequential
+import cv2
 from tensorflow.keras.layers import Dense, Flatten, Conv2D, MaxPooling2D
 from tensorflow.keras.losses import sparse_categorical_crossentropy
 from keras.optimizers import SGD
-from keras.preprocessing.image import ImageDataGenerator
+from keras.models import Sequential
 from keras.layers import Dropout
 from keras.layers import BatchNormalization
+from keras.preprocessing.image import ImageDataGenerator
 from LoadData import X_train, Y_train, X_test, Y_test, X_val, Y_val, IMG_HEIGHT, IMG_WIDTH, IMG_CHANNELS
 import matplotlib.pyplot as plt
 import numpy as np
@@ -22,7 +23,6 @@ input_shape = (IMG_WIDTH, IMG_HEIGHT, IMG_CHANNELS)
 # class 1 rain
 # class 2 shine
 # class 3 sunrise
-
 classes = ["Cloudy", "Rain", "Shine", "Sunrise"]
 
 print("Data creation completed, we have", X_train.shape[0], "training paradigms of size",
@@ -39,13 +39,13 @@ while (sum(Y_train == class_to_demonstrate) > 4):
 
     # plot 4 images as gray scale
     plt.subplot(221)
-    plt.imshow(X_train[tmp_idxs_to_use[0][0], :, :, 0], cmap=plt.get_cmap('gray'))
+    plt.imshow(cv2.cvtColor(X_train[tmp_idxs_to_use[0][0]], cv2.COLOR_BGR2RGB))
     plt.subplot(222)
-    plt.imshow(X_train[tmp_idxs_to_use[0][1], :, :, 0], cmap=plt.get_cmap('gray'))
+    plt.imshow(cv2.cvtColor(X_train[tmp_idxs_to_use[0][1]], cv2.COLOR_BGR2RGB))
     plt.subplot(223)
-    plt.imshow(X_train[tmp_idxs_to_use[0][2], :, :, 0], cmap=plt.get_cmap('gray'))
+    plt.imshow(cv2.cvtColor(X_train[tmp_idxs_to_use[0][2]], cv2.COLOR_BGR2RGB))
     plt.subplot(224)
-    plt.imshow(X_train[tmp_idxs_to_use[0][3], :, :, 0], cmap=plt.get_cmap('gray'))
+    plt.imshow(cv2.cvtColor(X_train[tmp_idxs_to_use[0][3]], cv2.COLOR_BGR2RGB))
     tmp_title = str(classes[class_to_demonstrate]) + ' images'
     plt.suptitle(tmp_title)
 
@@ -89,7 +89,7 @@ model.add(Flatten())
 model.add(Dense(128, activation='relu', kernel_initializer='he_uniform'))
 model.add(BatchNormalization())
 model.add(Dropout(0.5))
-model.add(Dense(10, activation='softmax'))
+model.add(Dense(4, activation='softmax'))
 
 # Compile the model
 model.compile(optimizer=optimizer, loss=loss_function, metrics=['accuracy'])
