@@ -3,11 +3,11 @@ A convolutional neural network that can predict if the weather in an image is cl
 
 Results:
 
+![image](https://user-images.githubusercontent.com/36018286/118052373-47b80380-b38b-11eb-9989-f6529d11e2b6.png)
+
 ![validation-accuracy](https://user-images.githubusercontent.com/36018286/118052575-aaa99a80-b38b-11eb-890d-72e80b4bc3ab.png)
 
 ![validation-loss](https://user-images.githubusercontent.com/36018286/118052578-ab423100-b38b-11eb-886a-d19b6e871b26.png)
-
-![image](https://user-images.githubusercontent.com/36018286/118052373-47b80380-b38b-11eb-9989-f6529d11e2b6.png)
 
 ![confusion-matrix](https://user-images.githubusercontent.com/36018286/118039791-63b2a980-b379-11eb-9de1-c0de2bebf85d.png)
 
