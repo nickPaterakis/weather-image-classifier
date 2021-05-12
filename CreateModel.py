@@ -14,7 +14,7 @@ import numpy as np
 # Model configuration
 batch_size = 32
 loss_function = sparse_categorical_crossentropy
-no_epochs = 30
+no_epochs = 25
 optimizer = SGD(lr=0.001, momentum=0.9)
 verbosity = 1
 input_shape = (IMG_WIDTH, IMG_HEIGHT, IMG_CHANNELS)

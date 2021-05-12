@@ -50,7 +50,7 @@ def plot_confusion_matrix(cm, classes,
 classes = ["Cloudy", "Rain", "Shine", "Sunrise"]
 
 # Load the model
-loaded_model = keras.models.load_model('models/CNN_model.h5')
+loaded_model = keras.models.load_model('CNN_model.h5')
 
 # Parse numbers as floats
 X_train = X_train.astype('float32')
@@ -92,7 +92,7 @@ print('')
 cm = confusion_matrix(Y_test, y_pred_test)
 plot_confusion_matrix(cm=cm, classes=classes, title='Confusion Matrix')
 
-seed(2)
+seed(3)
 class_to_demonstrate = 0
 while (sum(y_pred_test == class_to_demonstrate) > 4):
     tmp_idxs_to_use = np.where(y_pred_test == class_to_demonstrate)
