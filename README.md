@@ -1,5 +1,5 @@
 # weather-predictor
-A convolutional neural network that can predict if the weather in an image is cloudy, rainy, sunny or sunrise. It achieves to find correct more than 90% of the images in test set.
+A VGG neural network that can predict if the weather in an image is cloudy, rainy, sunny or sunrise. It achieves to find correct more than 90% of the images in test set. I used Python, and Keras.
 
 Results:
 
