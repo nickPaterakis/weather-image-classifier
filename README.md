@@ -1,5 +1,9 @@
 # Weather Image Classifier
-A VGG neural network that can predict if the weather in an image is cloudy, rainy, sunny or sunrise. It achieves to find correct more than 90% of the images in test set. I used Python, and Keras.
+This project aims to classify weather conditions in images using deep learning techniques. The dataset used in this project is the Multi-class Weather Dataset which contains images of cloudy, rainy, sunny, and sunrise weather conditions.
+
+The model used for classification is a VGG neural network implemented in Python using the Keras library. The model has achieved over 90% accuracy on the test set.
+
+In addition to the classification score diagram, the project includes diagrams showing the validation accuracy and loss history as well as a confusion matrix. The repository also includes example images of the model's predictions.
 
 # Model Performance
 
